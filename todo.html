@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box">
+
+            <h1>ToDo List :</h1>
+
+            <div class="row">
+                <input type="text" placeholder="Enter your task here..."></input>
+                <button>+</button>
+            </div>
+
+            <ul id="my_task">
+
+
+        </div>
+
+    </div>
+
+
+    </ul>
+    <script>
+
+        const mylist = document.querySelector("ul");
+        const newinput = document.querySelector("input");
+        const Addbutton = document.querySelector("button");
+
+        Addbutton.addEventListener("click", () => {
+
+            const text = newinput.value;
+            newinput.value = "";
+
+            const element = document.createElement("li");
+            const textcreate = document.createTextNode(text);
+            element.append(textcreate);
+
+            const deletebutton = document.createElement("a");
+            const deletenode = document.createTextNode("x");
+            deletebutton.append(deletenode);
+            
+
+
+            element.append(deletebutton);
+
+            deletebutton.addEventListener("click", () => {
+                mylist.removeChild(element);
+            })
+
+            mylist.appendChild(element);
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>
