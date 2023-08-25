@@ -118,3 +118,18 @@ a {
     
     
 }
+
+
+/* ---------------------custom scroll bar------------------------------ */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: #83818137;
+    border-radius : 10px
+    
+}
